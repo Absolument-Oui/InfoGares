@@ -10,14 +10,14 @@ import App from './App';
 
 
 const fbapp = initializeApp({
-	apiKey: "AIzaSyCWi0EChm97lofJrhqBp6wRRtgQGKq8IEg",
-	authDomain: "infogares-f.firebaseapp.com",
-	databaseURL: "https://infogares-f-default-rtdb.europe-west1.firebasedatabase.app",
-	projectId: "infogares-f",
-	storageBucket: "infogares-f.appspot.com",
-	messagingSenderId: "984551924335",
-	appId: "1:984551924335:web:7a6ba46c0cafd4f8eb639a",
-	measurementId: "G-54QXGBEX7E"
+	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+	authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+	databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+	projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+	storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_URL,
+	messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+	appId: process.env.REACT_APP_FIREBASE_APP_ID,
+	measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 });
 
 const analytics = getAnalytics(fbapp);
